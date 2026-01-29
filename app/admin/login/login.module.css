@@ -1,0 +1,137 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--gradient-end) 100%);
+  padding: 2rem;
+}
+
+.loginBox {
+  background: rgba(26, 26, 46, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.loginHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.loginTitle {
+  font-size: 2rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.loginSubtitle {
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.formInput {
+  padding: 0.875rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(26, 26, 46, 0.8);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--highlight-color);
+  background: rgba(26, 26, 46, 1);
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+}
+
+.formInput::placeholder {
+  color: var(--text-gray);
+}
+
+.errorMessage {
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid var(--highlight-color);
+  color: var(--highlight-color);
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.loginButton {
+  padding: 1rem;
+  background: var(--highlight-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  margin-top: 0.5rem;
+}
+
+.loginButton:hover:not(:disabled) {
+  background: #d63a52;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(233, 69, 96, 0.3);
+}
+
+.loginButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loginFooter {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.backLink {
+  color: var(--text-gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+  .loginBox {
+    padding: 2rem;
+  }
+
+  .loginTitle {
+    font-size: 1.75rem;
+  }
+}

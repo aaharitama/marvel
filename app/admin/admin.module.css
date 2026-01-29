@@ -1,0 +1,293 @@
+.adminContainer {
+  min-height: 100vh;
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 2rem;
+}
+
+.adminHeader {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+}
+
+.languageTabs {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tabActive {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: none;
+  color: var(--highlight-color);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 3px solid var(--highlight-color);
+  transition: all 0.3s ease;
+  margin-bottom: -2px;
+}
+
+.adminTitle {
+  font-size: 2rem;
+  color: var(--highlight-color);
+  margin: 0;
+}
+
+.adminActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.backButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.saveButton {
+  padding: 0.75rem 1.5rem;
+  background: var(--highlight-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.saveButton:hover {
+  background: #d63a52;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+.logoutButton {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid rgba(233, 69, 96, 0.5);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.logoutButton:hover {
+  border-color: var(--highlight-color);
+  background: rgba(233, 69, 96, 0.1);
+  color: var(--highlight-color);
+}
+
+.resetButton {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--text-gray);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.resetButton:hover {
+  border-color: var(--highlight-color);
+  color: var(--highlight-color);
+}
+
+.adminContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.languageIndicator {
+  background: rgba(233, 69, 96, 0.2);
+  border: 2px solid var(--highlight-color);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.indicatorLabel {
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.indicatorValue {
+  color: var(--highlight-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.langTag {
+  color: var(--highlight-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(233, 69, 96, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.adminSection {
+  background: rgba(26, 26, 46, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: var(--highlight-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(26, 26, 46, 0.8);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--highlight-color);
+  background: rgba(26, 26, 46, 1);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(26, 26, 46, 0.8);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--highlight-color);
+  background: rgba(26, 26, 46, 1);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.serviceEditor {
+  background: rgba(22, 33, 62, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.serviceEditorTitle {
+  font-size: 1.25rem;
+  color: var(--highlight-color);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .adminContainer {
+    padding: 1rem;
+  }
+
+  .adminHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adminActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .backButton,
+  .saveButton,
+  .resetButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
