@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useContent } from '@/contexts/ContentContext'
+import type { ContentData } from '@/contexts/ContentContext'
 import { isAuthenticated, logout } from '@/utils/auth'
 import styles from './admin.module.css'
 
@@ -67,7 +68,7 @@ export default function AdminPage() {
 
   const handleReset = () => {
     if (confirm(`Are you sure you want to reset ${activeLang.toUpperCase()} content to default values?`)) {
-      const defaultContent = activeLang === 'en' 
+      const defaultContent: ContentData = activeLang === 'en' 
         ? {
             companyName: 'PT MARVEL INDONESIA TEKNOLOGI',
             hero: {
@@ -83,12 +84,12 @@ export default function AdminPage() {
               title: 'Our Services',
               subtitle: 'Comprehensive IT solutions tailored to your business needs',
               items: [
-                { icon: 'briefcase', title: 'IT Strategy & Consulting', description: 'Strategic planning and advisory services to align your IT infrastructure with business goals and drive digital transformation.' },
-                { icon: 'cloud', title: 'Cloud Solutions', description: 'Cloud migration, architecture design, and optimization services to help you leverage the power of cloud computing.' },
-                { icon: 'lock', title: 'Cybersecurity', description: 'Comprehensive security assessments, implementation, and monitoring to protect your digital assets and data.' },
-                { icon: 'mobile', title: 'Software Development', description: 'Custom software solutions and application development tailored to your specific business requirements.' },
-                { icon: 'refresh', title: 'Digital Transformation', description: 'End-to-end digital transformation services to modernize your business processes and enhance operational efficiency.' },
-                { icon: 'tools', title: 'IT Infrastructure', description: 'Design, implementation, and management of robust IT infrastructure to support your business operations.' },
+                { icon: 'briefcase' as const, title: 'IT Strategy & Consulting', description: 'Strategic planning and advisory services to align your IT infrastructure with business goals and drive digital transformation.' },
+                { icon: 'cloud' as const, title: 'Cloud Solutions', description: 'Cloud migration, architecture design, and optimization services to help you leverage the power of cloud computing.' },
+                { icon: 'lock' as const, title: 'Cybersecurity', description: 'Comprehensive security assessments, implementation, and monitoring to protect your digital assets and data.' },
+                { icon: 'mobile' as const, title: 'Software Development', description: 'Custom software solutions and application development tailored to your specific business requirements.' },
+                { icon: 'refresh' as const, title: 'Digital Transformation', description: 'End-to-end digital transformation services to modernize your business processes and enhance operational efficiency.' },
+                { icon: 'tools' as const, title: 'IT Infrastructure', description: 'Design, implementation, and management of robust IT infrastructure to support your business operations.' },
               ],
             },
             contact: {
@@ -114,12 +115,12 @@ export default function AdminPage() {
               title: 'Layanan Kami',
               subtitle: 'Solusi IT komprehensif yang disesuaikan dengan kebutuhan bisnis Anda',
               items: [
-                { icon: 'briefcase', title: 'Strategi & Konsultasi IT', description: 'Layanan perencanaan strategis dan konsultasi untuk menyelaraskan infrastruktur IT Anda dengan tujuan bisnis dan mendorong transformasi digital.' },
-                { icon: 'cloud', title: 'Solusi Cloud', description: 'Layanan migrasi cloud, desain arsitektur, dan optimasi untuk membantu Anda memanfaatkan kekuatan komputasi cloud.' },
-                { icon: 'lock', title: 'Keamanan Siber', description: 'Penilaian keamanan, implementasi, dan pemantauan komprehensif untuk melindungi aset digital dan data Anda.' },
-                { icon: 'mobile', title: 'Pengembangan Perangkat Lunak', description: 'Solusi perangkat lunak khusus dan pengembangan aplikasi yang disesuaikan dengan kebutuhan bisnis spesifik Anda.' },
-                { icon: 'refresh', title: 'Transformasi Digital', description: 'Layanan transformasi digital end-to-end untuk memodernisasi proses bisnis Anda dan meningkatkan efisiensi operasional.' },
-                { icon: 'tools', title: 'Infrastruktur IT', description: 'Desain, implementasi, dan manajemen infrastruktur IT yang kuat untuk mendukung operasi bisnis Anda.' },
+                { icon: 'briefcase' as const, title: 'Strategi & Konsultasi IT', description: 'Layanan perencanaan strategis dan konsultasi untuk menyelaraskan infrastruktur IT Anda dengan tujuan bisnis dan mendorong transformasi digital.' },
+                { icon: 'cloud' as const, title: 'Solusi Cloud', description: 'Layanan migrasi cloud, desain arsitektur, dan optimasi untuk membantu Anda memanfaatkan kekuatan komputasi cloud.' },
+                { icon: 'lock' as const, title: 'Keamanan Siber', description: 'Penilaian keamanan, implementasi, dan pemantauan komprehensif untuk melindungi aset digital dan data Anda.' },
+                { icon: 'mobile' as const, title: 'Pengembangan Perangkat Lunak', description: 'Solusi perangkat lunak khusus dan pengembangan aplikasi yang disesuaikan dengan kebutuhan bisnis spesifik Anda.' },
+                { icon: 'refresh' as const, title: 'Transformasi Digital', description: 'Layanan transformasi digital end-to-end untuk memodernisasi proses bisnis Anda dan meningkatkan efisiensi operasional.' },
+                { icon: 'tools' as const, title: 'Infrastruktur IT', description: 'Desain, implementasi, dan manajemen infrastruktur IT yang kuat untuk mendukung operasi bisnis Anda.' },
               ],
             },
             contact: {

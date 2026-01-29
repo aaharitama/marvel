@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-interface ContentData {
+export interface ContentData {
   companyName: string
   hero: {
     subtitle: string
